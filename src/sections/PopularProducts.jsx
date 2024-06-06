@@ -15,9 +15,9 @@ const PopularProducts = () => {
       </div>
 
       <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14">
-        {products.map((product) => (
+        {products.map((product, index) => (
           // TODO: add an onclick handler to show each item and their details
-          <PopularProductCard {...product} />
+          <PopularProductCard key={index} {...product} />
         ))}
       </div>
     </section>
