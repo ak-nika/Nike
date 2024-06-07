@@ -15,5 +15,5 @@ export {
   SpecialOffer,
   Subscribe,
   SuperQuality,
-  Services,
+  Services
 };

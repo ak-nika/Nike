@@ -9,6 +9,8 @@ import {
   SuperQuality,
 } from "./sections/index";
 import Nav from "./components/Nav";
+import { Routes, Route } from "react-router-dom";
+import LogOrSign from "./components/LogOrSign";
 
 const App = () => (
   <main className="relative overflow-x-hidden">
@@ -37,6 +39,10 @@ const App = () => (
     <section className="bg-black padding-t padding-x pb-8">
       <Footer />
     </section>
+    {/* <Routes>
+      <Route path="/" element={<App />} />
+      <Route path='/signUp' element={<LogOrSign />} />
+    </Routes> */}
   </main>
 );
 

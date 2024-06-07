@@ -2,6 +2,7 @@ import { headerLogo } from "../assets/images";
 import { hamburger, close } from "../assets/icons";
 import { navLinks } from "../constants";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [clicked, setClicked] = useState(true);
@@ -11,7 +12,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
+    <header className="padding-x py-8 absolute z-50 w-full">
       <nav className="flex justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} alt="Logo" width={130} height={29} />
@@ -28,12 +29,12 @@ const Nav = () => {
             </li>
           ))}
           <li>
-            <a
+            <Link
               className="font-bold font-montserrat text-lg text-slate-gray"
-              href=""
+              to={`/signUp`}
             >
               Sign Up/Log In
-            </a>
+            </Link>
           </li>
         </ul>
         <div
@@ -68,12 +69,12 @@ const Nav = () => {
               </li>
             ))}
             <li>
-              <a
+              <Link
                 className="font-bold font-montserrat text-lg text-slate-gray"
-                href=""
+                to={'/signUp'}
               >
                 Sign Up/Log In
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
