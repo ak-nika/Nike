@@ -5,12 +5,12 @@ const LogOrSign = () => {
 
   const register = () => {
     if (container.current) {
-      container.current.classList.add(style.active);
+      container.current.classList.add("active");
     }
   };
   const login = () => {
     if (container.current) {
-      container.current.classList.remove(style.active);
+      container.current.classList.remove("active");
     }
   };
 
@@ -192,6 +192,9 @@ const LogOrSign = () => {
 .container.active .toggleRight {
   transform: translateX(200%);
 }
+.boldText {
+  font-weight: 600;
+}
 
 @keyframes move {
   0%,
@@ -205,7 +208,6 @@ const LogOrSign = () => {
     z-index: 5;
   }
 }
-
             `}
       </style>
       <div className="body">
@@ -214,11 +216,17 @@ const LogOrSign = () => {
             <form>
               <h1>Create Account</h1>
               <div className="socialIcons">
-                <a href="#" className="icon">
+              <a href="#" className="icon">
                   <i className="fa-brands fa-google"></i>
                 </a>
                 <a href="#" className="icon">
                   <i className="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" className="icon">
+                  <i className="fa-brands fa-github"></i>
+                </a>
+                <a href="#" className="icon">
+                  <i className="fa-brands fa-linkedin-in"></i>
                 </a>
               </div>
               <span>or use your email for registration</span>
@@ -257,21 +265,25 @@ const LogOrSign = () => {
           <div className="toggleContainer">
             <div className="toggle">
               <div className="togglePanel toggleLeft">
-                <h1>Welcome Back!</h1>
-                <p>
-                  Enter your personal details to use all of our site's features
+                <h1 className="boldText">Welcome Back!</h1>
+                <p className="boldText">
+                We're thrilled to have you here again. Explore our latest collections and find the 
+                perfect pair of shoes that combine cutting-edge design with unmatched comfort. Let's 
+                get you back on track with the best in footwear innovation.
                 </p>
+                <p>Don't have an account?</p>
                 <button className="hide" onClick={login}>
                   Sign In
                 </button>
               </div>
 
               <div className="togglePanel toggleRight">
-                <h1>Hello there!</h1>
-                <p>
-                  Register with your personal details to use all of our site's
-                  features
+                <h1 className="boldText">Hello there!</h1>
+                <p className="boldText">
+                  Register with your personal details to get access to the best features of the best, most
+                  comfortable, and cheapest shoes available
                 </p>
+                <p>Already have an account?</p>
                 <button className="hide" onClick={register}>
                   Sign Up
                 </button>
