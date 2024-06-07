@@ -39,10 +39,6 @@ const App = () => (
     <section className="bg-black padding-t padding-x pb-8">
       <Footer />
     </section>
-    {/* <Routes>
-      <Route path="/" element={<App />} />
-      <Route path='/signUp' element={<LogOrSign />} />
-    </Routes> */}
   </main>
 );
 
