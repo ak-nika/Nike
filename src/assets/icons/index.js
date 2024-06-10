@@ -11,6 +11,8 @@ import star from './star.svg'
 import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
 import close from './close.svg'
+import logo from './logo.svg'
+import logoName from './logoName.svg'
 
 export {
     arrowRight,
@@ -25,5 +27,7 @@ export {
     shieldTick,
     star,
     truckFast,
-    twitter
+    twitter,
+    logo,
+    logoName
 }

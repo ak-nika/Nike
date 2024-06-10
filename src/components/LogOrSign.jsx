@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { logo, logoName } from "../assets/icons";
 
 const LogOrSign = () => {
   const container = useRef(null);
@@ -34,6 +35,7 @@ const LogOrSign = () => {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  padding: 0 20px;
 }
 .container {
   background-color: #fff;
@@ -208,15 +210,49 @@ const LogOrSign = () => {
     z-index: 5;
   }
 }
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+    .logo h1{
+     font-size: 30px;
+     font-weight: bold;
+    }
+  .logo2{
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+        .logo{
+           display: none;
+         }
+        .logo2{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+         }
+  }
             `}
       </style>
       <div className="body">
+        <div>
+          <div className="logo">
+            <h1>Nike</h1>
+            <img width={100} src={logo} alt="Nike Logo" />
+          </div>
+          <div className="logo2">
+            <img src={logoName} alt="Nike Logo" width={100} />
+          </div>
+        </div>
         <div className="container" ref={container}>
           <div className="formContainer signUp">
             <form>
               <h1>Create Account</h1>
               <div className="socialIcons">
-              <a href="#" className="icon">
+                <a href="#" className="icon">
                   <i className="fa-brands fa-google"></i>
                 </a>
                 <a href="#" className="icon">
@@ -267,21 +303,21 @@ const LogOrSign = () => {
               <div className="togglePanel toggleLeft">
                 <h1 className="boldText">Welcome Back!</h1>
                 <p className="boldText">
-                We're thrilled to have you here again. Explore our latest collections and find the 
-                perfect pair of shoes that combine cutting-edge design with unmatched comfort. Let's 
-                get you back on track with the best in footwear innovation.
+                  We're thrilled to have you here again. Let's get you back on
+                  track with the best in footwear innovation.
                 </p>
                 <p>Don't have an account?</p>
                 <button className="hide" onClick={login}>
-                  Sign In
+                  Log In
                 </button>
               </div>
 
               <div className="togglePanel toggleRight">
                 <h1 className="boldText">Hello there!</h1>
                 <p className="boldText">
-                  Register with your personal details to get access to the best features of the best, most
-                  comfortable, and cheapest shoes available
+                  Register with your personal details to get access to the best
+                  features of the best, most comfortable, and cheapest shoes
+                  available
                 </p>
                 <p>Already have an account?</p>
                 <button className="hide" onClick={register}>
