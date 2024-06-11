@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { products } from "../constants";
 import PopularProductCard from "../components/PopularProductCard";
+
 
 const PopularProducts = () => {
   return (
@@ -15,9 +17,10 @@ const PopularProducts = () => {
       </div>
 
       <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14">
-        {products.map((product, index) => (
-          // TODO: add an onclick handler to show each item and their details
-          <PopularProductCard key={index} {...product} />
+        {products.map((product) => (
+          <Link to={`/product/${product.id}`} >
+            <PopularProductCard key={product.id} {...product} />
+          </Link>
         ))}
       </div>
     </section>

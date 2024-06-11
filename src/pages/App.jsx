@@ -7,10 +7,8 @@ import {
   SpecialOffer,
   Subscribe,
   SuperQuality,
-} from "./sections/index";
-import Nav from "./components/Nav";
-import { Routes, Route } from "react-router-dom";
-import LogOrSign from "./components/LogOrSign";
+} from "../sections/index";
+import Nav from "../components/Nav";
 
 const App = () => (
   <main className="relative overflow-x-hidden">
