@@ -38,10 +38,11 @@ const SignUp = () => {
         <p className="font-palanquin font-bold text-xl text-slate-gray text-center">
           OR
         </p>
+        
         <div className="w-full flex justify-center items-center gap-3 my-3 border border-slate-gray rounded-full p-4 hover:cursor-pointer hover:bg-gray-200 transition-colors duration-150">
           <img src={google} alt="google icon" width={20} height={20} />
-          <p className="font-palanquin font-semibold text-xl text-slate-gray">
-            Sign Up with Google
+          <p className="font-palanquin font-semibold text-x">
+            Sign <span className="text-coral-red">Up</span> with Google
           </p>
         </div>
       </div>
