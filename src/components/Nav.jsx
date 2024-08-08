@@ -81,7 +81,15 @@ const Nav = () => {
                 className="font-bold font-montserrat text-lg text-slate-gray"
                 to={'/signUp'}
               >
-                Sign Up/Log In
+                Sign Up
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-bold font-montserrat text-lg text-slate-gray"
+                to={'/logIn'}
+              >
+                Log In
               </Link>
             </li>
           </ul>
