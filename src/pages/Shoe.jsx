@@ -1,8 +1,7 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../constants";
 import Button from "../components/Button";
-import { star } from "../assets/icons";
+import { arrowRight, star } from "../assets/icons";
 import { Footer } from "../sections";
 
 const Shoe = () => {
@@ -30,7 +29,7 @@ const Shoe = () => {
           </p>
           <p className="text-2xl font-palanquin font-bold">Rated by 100k+ people</p>
           </div>
-          <Button label="Order Now" />
+          <Button label="Order Now" iconURL={arrowRight} />
           <p className="text-xl font-montserrat underline underline-offset-8 font-bold leading-normal mt-3">Shipping</p>
           <p className="text-lg mt-2 font-palanquin font-medium text-slate-gray">You'll see at checkout</p>
         </div>
